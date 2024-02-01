@@ -10,12 +10,36 @@ display([4 2 3; 2 3 4] * [1 0; 0 1; 2 -3])
 
 ###Question 2###
 println("\nQUESTION 2:\n")
+println("a.\n")
 
 # Define the symbols
 @syms a b z u g c f v k l w t s
 A = [2 b a; z 4 u; g c f]
 B = [3 v k; k l w; v t s]
 C = A*B
+C_12 = C[1,2]
+C_23 = C[2,3]
+C_32 = C[3,2]
+display(C)
+println()
+println(C_12)
+println(C_23)
+println(C_32)
+
+println("\nb.\n")
+
+C = transpose(A)*B
+C_12 = C[1,2]
+C_23 = C[2,3]
+C_32 = C[3,2]
+display(C)
+println(C_12)
+println(C_23)
+println(C_32)
+
+println("\nc.\n")
+
+C = transpose(A)*transpose(B)
 C_12 = C[1,2]
 C_23 = C[2,3]
 C_32 = C[3,2]
